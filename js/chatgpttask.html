@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Countdown Timer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      background-color: #222;
+      color: #eee;
+    }
+    #timer {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="timer">03 : 00</h1>
+
+  <button id="start">Start</button>
+  <button id="stop">Stop</button>
+  <button id="reset">Reset</button>
+
+  <script>
+    let minutes = 3;
+    let seconds = 0;
+    let timerId = null;
+
+    const timerDisplay = document.getElementById('timer');
+    const startBtn = document.getElementById('start');
+    const stopBtn = document.getElementById('stop');
+    const resetBtn = document.getElementById('reset');
+
+
+    function updateDisplay() {
+      if (minutes === 0 && seconds === 0) {
+        timerDisplay.textContent = "Time's up!";
+        return;
+      }
+      const m = minutes < 10 ? '0' + minutes : minutes;
+      const s = seconds < 10 ? '0' + seconds : seconds;
+      timerDisplay.textContent = `${m} : ${s}`;
+    }
+
+    function countdown() {
+      if (minutes === 0 && seconds === 0) {
+        clearInterval(timerId);
+        timerId = null;
+        updateDisplay();
+        return;
+      }
+      if (seconds === 0) {
+        minutes--;
+        seconds = 59;
+      } else {
+        seconds--;
+      }
+      updateDisplay();
+    }
+
+    startBtn.addEventListener('click', () => {
+      if (timerId === null) {
+        timerId = setInterval(countdown, 1000);
+      }
+    });
+
+    stopBtn.addEventListener('click', () => {
+      if (timerId !== null) {
+        clearInterval(timerId);
+        timerId = null;
+      }
+    });
+
+    resetBtn.addEventListener('click', () => {
+      if (timerId !== null) {
+        clearInterval(timerId);
+        timerId = null;
+      }
+      minutes = 3;
+      seconds = 0;
+      updateDisplay();
+    });
+
+    // Initialize display on page load
+    updateDisplay();
+  </script>
+</body>
+</html>

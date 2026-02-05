@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h2>FakeStore</h2>
+        <input type="text" id="search" placeholder="Enter your Product....">
+        <button onclick="getProductData()">Search</button>
+        <div id="container"></div>
+        <script>
+            let search = document.getElementById('search');
+            let container = document.getElementById('container');
+            function getProductData(){
+               let searchText =  search.value.trim();
+               if(searchText === ""){
+                search.innerText = "Enter your Item";
+                return;
+               }
+               fetch(`https://dummyjson.com/products/search?q=${search.value}`)
+               .then(res=>res.json())
+               .then(data=>displayData(data))
+               .catch(err=>{
+                container.innerHTML = "<h3>Fetching  the Element...</h3>";
+                console.log(err);
+               })
+            }
+            function displayData(items){
+                container.innerHTML = "";
+                items.products.forEach(item => {
+                    let card =document.createElement("div");
+                    card.style.border="2px solid #ccc";
+                    card.style.padding="10px";
+                    card.style.margin="10px";
+                    card.style.display="inline-block";
+                    card.style.verticalAlign="top";
+                    card.style.background="white";
+
+                    card.innerHTML = `
+                    <img src="${item.images}" width=150px>
+                    <h3><b>title:</b>${item.title}</h3>
+                    <p><b>Category:</b>${item.category}</p>
+                    <p><b>Price: $</b>${item.price}</p>
+                    <p><b>Rating: ⭐</b>${item.rating}</p>
+                    `;
+                    container.appendChild(card);
+                });
+
+            }
+        </script>
+</body>
+</html>

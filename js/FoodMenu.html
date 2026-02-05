@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="search" id="search" placeholder="Enter your item Name...">
+    <button id="enter" onclick="getData()">Search</button>
+    <div id="container">
+
+    </div>
+    <script>
+    let search = document.getElementById('search');
+let container = document.getElementById('container');
+
+function getData(){
+    let searchText = search.value.trim();
+
+    if(searchText === ""){
+        alert("Enter your item name...");
+        return;
+    }
+
+    fetch(`https://dummyjson.com/recipes/search?q=${encodeURIComponent(searchText)}`)
+        .then(res => res.json())
+        .then(data => displayData(data.recipes))
+        .catch(() => console.log("Error fetching data"));            
+}
+
+function displayData(recipes){
+    container.innerHTML = "";
+
+    if(recipes.length === 0){
+        container.innerHTML = "<h3>No Item Found</h3>";
+        return;
+    }
+
+    recipes.forEach(recipe => {
+        let card = document.createElement("div");
+        card.style.border = "2px solid #ccc";
+        card.style.padding = "20px";
+        card.style.margin = "10px";
+        card.style.width = "250px";
+        card.style.display = "inline-block";
+        card.style.verticalAlign = "top";
+        card.style.background = "white";
+
+        card.innerHTML = `
+            <img src="${recipe.image}" width="100%">
+            <h3>${recipe.name}</h3>
+            <p><b>Cuisine:</b> ${recipe.cuisine}</p>
+            <p><b>Calories:</b> ${recipe.caloriesPerServing}</p>
+            <p><b>Rating:</b> ⭐ ${recipe.rating}</p>
+        `;
+
+        container.appendChild(card);
+    });
+}
+
+</script>
+</body>
+</html>

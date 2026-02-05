@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-image: linear-gradient(145deg,rgb(111, 111, 252),rgb(207, 245, 207));
+}
+
+h1{
+    text-align: center;
+}
+#effects{
+    margin: auto;
+    max-width: 1280px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4,1fr);
+}
+.effect{
+    padding: 50px;
+    background-image: linear-gradient(145deg,rgb(48, 44, 168),rgb(209, 117, 221));
+    color: black;
+    border-radius: 20px;
+    font-size: 32px;
+    transition: all 0.5s ease;
+}
+.effect1:hover{
+   transform: scale(1.1);
+}
+.effect2:hover{
+   transform: scale(0.8);
+}
+.effect3:hover{
+   transform: translateX(100px);
+}
+.effect4:hover{
+   transform: translateY(100px)
+}
+.effect5:hover{
+   transform: rotate(360deg);
+}
+.effect6:hover{
+   transform: skew(40deg);
+}
+
+@media (max-width:576px) { /* mobile */
+    body{
+        background-image: none;
+        background-color: green;
+    }
+  #effects{
+    grid-template-columns: repeat(2,1fr);
+  }
+
+}
+@media (min-width:576px) and (max-width:768px){ /* mobile landscape ,tablet */
+
+
+}
+@media (min-width:768px) and (max-width:1024px){ /* big tablets*/
+   
+}
+    </style>
+</head>
+<body>
+    <h1>ALL Transition-Effects</h1>
+    <div id="effects">
+        <div class="effect effect1">
+              ZOOM IN
+        </div>
+        <div class="effect effect2">
+              ZOOM out
+        </div>
+        <div class="effect effect3">
+             Slide out right
+        </div>
+        <div class="effect effect4">
+              slide out Down
+        </div>
+        <div class="effect effect5">
+              Rotate
+        </div>
+        <div class="effect effect6">
+              Skew
+        </div>
+    </div>
+</body>
+</html>

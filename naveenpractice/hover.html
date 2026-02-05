@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            body {
+  /* Use a dynamic or interesting background for the effect to work */
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.background-container {
+  /* Sizing for the demo */
+  width: 400px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Add some background behind the button */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+}
+
+.liquid-glass-button {
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  /* The core liquid glass effect properties */
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  backdrop-filter: blur(5px);           /* The essential blur effect */
+  -webkit-backdrop-filter: blur(5px);  /* Safari support */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1) inset; /* Subtle depth/highlight */
+  transition: all 0.3s ease;
+}
+
+.liquid-glass-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15), 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+  transform: translateY(-2px);
+}
+    </style>
+</head>
+<body>
+    <div class="background-container">
+  <button class="liquid-glass-button">
+    Hover me
+  </button>
+</div>
+</body>
+</html>

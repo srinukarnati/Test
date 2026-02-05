@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newebsite</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-image: url(bgimage.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 50px 0px 50px;
+        }
+        .container{
+            display: flex;
+            gap: 60px;
+
+        }
+        #tagname{
+            font-size: 50px;
+            background-image: linear-gradient(to left,red,black);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: zoomIn  1.4s infinite ease-in-out;
+        }
+        @keyframes zoomIn{
+             0%,100%{
+                transform: scale(0.5);
+            }
+            50%{
+                transform: scale(1.1);
+            }
+
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="tagname"><b>Portfolio</b></div>
+        <div class="container">
+            <a href="" class="anchortag">Home</a>
+            <a href="" class="anchortag">About</a>
+            <a href="" class="anchortag">technical Skills</a>
+            <a href="" class="anchortag">Contact</a>
+        </div>
+    </header>
+    <main></main>
+    <footer></footer>
+</body>
+</html>

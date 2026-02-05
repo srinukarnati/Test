@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+}
+header{
+    text-align: center;
+    font-size: 48px;
+    padding: 20px 0px;
+    background-color: rgb(35, 110, 64);
+    color: white;
+}
+#categories{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1280px;
+    margin: auto;
+}
+#categories>img{
+    border-radius: 20px;
+}
+footer{
+    text-align: center;
+    font-size: 24px;
+    padding: 20px 0px;
+    background-color: rgb(35, 110, 64);
+    color: white;
+}
+.category{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-top-left-radius: 20%;border-top-right-radius: 20%;
+    background-color: rgb(35, 110, 64);
+
+}
+.category>h3{
+    background-color: rgb(35, 110, 64);
+    color: white;
+}
+.title{
+    text-align: center;
+    margin: 20px;
+}
+.category>img{
+    height: 75px;
+    border-radius: 20%;
+}
+#deals{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: auto;
+    max-width: 1280px;
+    gap: 30px;
+    
+}
+.product>img{
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 20px;
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 5px 5px 5px 1px rgb(35, 110, 64);
+    border-radius: 20px;
+    padding: 20px;   
+    transition: all 0.5s ease;
+}
+.product8:hover{
+transform: scale(1.03);
+}
+.product1:hover{
+transform: scale(1.04);
+}
+.product2:hover{
+   transform: scale(1.05);
+}
+.product3:hover{
+   transform: scale(0.95);
+}
+.product4:hover{
+   transform: translateX(100px);
+}
+.product5:hover{
+   transform: translateY(100px)
+}
+.product6:hover{
+   transform: rotate(5deg);
+}
+.product7:hover{
+   transform: skew(5deg);
+}
+.oldprice{
+    text-decoration: 2px solid black line-through;
+    margin: 0px 5px;
+}
+button{
+    width: 100%;
+    background-color: black;
+    padding: 20px 0px;
+    color: white; border-radius: 20px;
+    transform: all 0.5 ease-out;
+}#floating-whatsapp{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+@media (max-width:576px) { /* mobile */
+    body{
+        background-image: none;
+        background-color: green;
+    }
+  #effects{
+    grid-template-columns: repeat(2,1fr);
+  }
+
+}
+@media (min-width:576px) and (max-width:768px){ /* mobile landscape ,tablet */
+
+
+}
+@media (min-width:768px) and (max-width:1024px){ /* big tablets*/
+   
+}
+

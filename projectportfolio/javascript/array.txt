@@ -1,0 +1,40 @@
+Array:
+// use forEach and print each elements cube in given 
+let arr=[5,4,9,8];
+arr.each(function(ele,ind))
+{
+    console.log(ele**3)
+}
+
+8. map(callbackfunction(ele,ind)):
+   map is used to pass a callbackfunction to eacch and every element of the array and return a value for each and every element of the array.
+   eg: let arr=[5,4,6,3]
+   let x=arr.map((e,i)=>{
+    return e*e;
+   })
+   console.log(x); //[25,16,36,9]
+
+ 9. filter is also similar to map but it returns only the elements whose condition is true
+   let arr=[5,4,6,3]
+   let x=arr.filter((e,i)=>e>=5)
+   console.log(x); //[5,6]
+
+ 10. indexOf('ele'): it is used to return the first occurance of element's index.
+  let arr=[5,4,9,4];
+  console.log(arr.indexOf(4),arr.lastindexOf(4)) //[4,4]
+  let x=arr.find((ele,ind)=>
+  {
+    return ele%2==0;
+  })
+  console.log(x)
+
+
+ 11. find(caalbackfunction(ele,ind)) ; works similarly as filter but returns only first element that satisfies the conditionwe can use alternative findIndx, findLast, findLastIndex
+
+ 12. reverse(): it is used to reverse the given array
+ 13. reduce(callbackfunction(prev,curr),intial_value) : it is used to find cumulative values in given array
+
+
+
+
+

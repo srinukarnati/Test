@@ -4,10 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: aliceblue; 
+        }
+        #box{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            margin: auto;
+            max-width: 1280px;
+            gap: 30px;
+        }
+        *container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 5px 5px 5px 1px rgb(35, 110, 64);
+            border-radius: 20px;
+            padding: 20px; 
+        }
+        *boxcontainer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 5px 5px 5px 1px rgb(35, 110, 64);
+            border-radius: 20px;
+            padding: 20px;  
+        }
+    </style>
 </head>
 <body>
-    <h1>HTML Forms Demonstration</h1>
-    <h3>1. Contact Form</h3>
+    <!-- <h1>HTML Forms Demonstration</h1> -->
+    <!-- <h3>1. Contact Form</h3>
     <fieldset>
         <p>Personal Information</p> 
     <label for="Full Name:">Full Name</label>
@@ -75,7 +108,16 @@
 
 
 
-    </fieldset>
+    </fieldset> -->
+    <!-- <hr> -->
+    <section id="box">
+        <div class="container">
+            <div class="boxcontainer">fhgflgj</div>
+            <div class="boxcontainer">jvkufv</div>
+            <div class="boxcontainer">sdvgfukvy</div>
+        </div>
+    </section>
+
 
 </body>
 </html>

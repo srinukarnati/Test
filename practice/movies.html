@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            background-color: black;
+        }
+        div{
+            display: flex;
+            gap: 20px;
+        }
+        img{
+            border-radius: 20px;
+            -webkit-box-reflect:below 2.5px
+            linear-gradient(transparent, transparent, rgba(3,3,3,0.2));
+            
+            margin: 5px;
+            transition: 0.5s ease;
+            cursor: pointer;
+        }
+        div:hover > :not(:hover){
+            opacity: 0.3;
+        }
+        img:hover{
+            transform: scale(1.1);
+            filter: grayscale(0%);
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtTCLltZiknu2TOicX-x3f09oRdc0cFR0uUw&s" alt="">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQwz6N3NKmF_U0Zq3XQTf5g1_Xwepsm3QT-w&s" alt="">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCREze_pW3DF2TQUYxq9IM3xMtpHm_HbeDFg&s" alt="">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT35j7CC1FB-yW5_QGj_fDVYHKDD3k3n80Deg&s" alt="">
+    </div>
+</body>
+</html>

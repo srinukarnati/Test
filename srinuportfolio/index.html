@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/4465141c39.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+      <nav>
+        <img src="" class="logo" />
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="fas fa-circle-xmark" onclick="Closemenu()"></i>
+        </ul>
+        <i class="fas fa-bars"onclick="Openmenu()"></i>
+      </nav>
+      <div class="head"><p>Java Full Stack Developer</p>
+          <h1>Hi I'am <span>Srinu</span> <br> From India</h1>
+      </div>
+      </div>
+    </div>
+  <div id="about">
+    <div class="container">
+      <div class="row">
+        <div class="up">
+          <img src="my pic.jpg">
+        </div>
+        <div class="down">
+          <h1 class="abo">About Me</h1>
+          <p>Seeking a good career in the IT industry where I can apply my knowledge and skills in software, gain practical experience, and contribute to organizational success.</p>
+          <div class="title">
+            <p class="subt acti" onclick="Open(event,'skills')">Skills</p>
+             <p class="subt" onclick="Open(event,'exp')">Experience</p>
+              <p class="subt" onclick="Open(event,'edu')">Education</p>
+              </div>
+              <div class="contents tab" id="skills">
+                <ul>
+                  <li><span>Java</span><br></li>
+                  <li><span>HTML5</span><br></li>
+                  <li><span>CSS3</span><br></li>
+                  <li><span>Javascript</span><br></li>
+                  <li><span>SQL</span><br></li>
+                </ul>
+              </div>
+                  <div class="contents" id="exp">
+                <ul>
+                  <li><span>Quiz App</span><br>Using HTML,CSS,Javascript</li>
+                  <li><span>Personal Portfolio Website</span><br>Using HTML,CSS,Javascript</li>
+                  <li><span>CRM Project</span><br> Using Python with framework of Django</li>
+                  <li><span>Library Management System</span><br>Using SQL</li>
+
+                </ul>
+              </div>
+                  <div class="contents" id="edu">
+                <ul>
+                  <li><span>2025</span><br>B.Tech </li>
+                  <li><span>2021</span><br>Intermediate</li>
+                  <li><span>2019</span><br>SSC</li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="services">
+        <div class="container">
+          <h1 class="sub">My Services</h1>
+          <div class="servicelist">
+            <div>
+              <i class="fa-solid fa-code"></i>
+              <h2>Web Application Development</h2>
+              <p>Build dynamic, responsive web apps using HTML, CSS, JavaScript, and Bootstrap.</p>
+            </div>
+              <div>
+                <i class="fa-solid fa-crop"></i>
+              <h2>Backend Development</h2>
+              <p>Scalable and secure backend systems using Java and SpringBoot</p>
+            </div>
+             <div>
+              <i class="fa-brands fa-app-store-ios"></i>
+              <h2>Database Design & Management</h2>
+              <p> Efficient schema design and database operations with SQL and PostgreSQL.</p>
+            </div>         
+           </div>
+        </div>
+  </div>
+  <div id="portfolio">
+    <div class="container">
+       <h1 class="sub">My Work</h1>
+       <div class="worklist">
+        <div class="work">
+          <img src="portfolio.jpeg">
+          <div class="layer">
+            <h3>Portfolio Website</h3>
+            <p>Fully responsive personal portfolio built using HTML, CSS, JavaScript, and Django</p>
+            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+          <div class="work">
+          <img src="student.jpeg">
+          <div class="layer">
+            <h3>Student Management System</h3>
+            <p>Features include student registration, login authentication, admin dashboard, and search functionality.</p>
+            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+          <div class="work">
+          <img src="quiz.jpeg">
+      <div class="layer">
+            <h3>Quiz App</h3>
+            <p>Interactive UI for users to attempt quizzes with multiple-choice questions.</p>
+            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+       </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+    
+  </div>
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="left">
+          <h1 class="subt">Contact Me</h1>
+          <p><i class="fa-solid fa-paper-plane"></i>karnatisrinu03@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i>9014406642</p>
+          <div class="icon">
+            <a href="https://github.com/srinukarnati"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/karnatisrinu03/"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+          <a href="sai_resume.pdf" download class="btn btn2">Download CV</a>
+        </div>
+        <div class="right">
+          <form name="submit-to-google-sheet">
+          <input name="Name" type="text" placeholder="Your Name" required>
+          <input name="Email" type="email" placeholder="Your email"required>
+          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn btn2">Submit</button>
+          </form>
+            <span id="msg"></span>
+        </div>
+      </div>
+    </div>
+    <div class="copy"><p>Copyright @ Srinu.Made with <i class="fa-solid fa-heart"></i> by Easy Tutorial</p></div>
+  </div>
+  <script>
+    var contents=document.getElementsByClassName('subt');
+    var links=document.getElementsByClassName('contents');
+    function Open(event,tabname){
+       for(content of contents){
+        content.classList.remove('acti');
+       }
+       for(link of links){
+        link.classList.remove('tab');
+       }
+       event.currentTarget.classList.add("acti");
+       document.getElementById(tabname).classList.add("tab");
+    }
+  </script>
+  <script>
+    var sidemu=document.getElementById('sidemenu');
+    function Openmenu(){
+      sidemu.style.right="0";
+    }
+    function Closemenu(){
+      sidemu.style.right="-200px";
+    }
+  </script>
+  <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxAkzoOm9OcYI4C0rP0ol6Jt2VJE6vwuXXf25UMTo_gDdEyrjltFg8_4QMHjsONCwuR/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg=document.getElementById("msg")
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response =>{
+        msg.innerHTML="Message sent successfully"
+        setTimeout(function(){
+          msg.innerHTML=""
+        },3000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+DOM manupilation: we can  manupilate an element using below properties
+i. textContent: it is used to read or change the text inside an element 
+ii. innerText: it is used to read or change the inside an element but it also loads CSS so incase of visibility hidden in CSS, it can't overpass it.
+iii. innerHTML: it is used to read or change HTML inside an element
+iv. style: it is used to change or read styles of an element
+v. value:  it is used to access or readd or change the vlaue of input
+vi. classList: it is used to add/ remove/ toggle the class names to elements
+
+DOM creation: we can create elements using document object with methods such as 
+    createElement('elementName') : it will create element 
+    appendChild(childElement) : it will add element to HTML
+    append(childElemments) : it will add multiple elements to HTML
+ 
+Events : Events are used to trigger based on user actions,they trigger functions to perform certain tasks based on use'r action Events are divided as several types
+such as 
+i. mouse events : mouse events are used when user fif an action using mouse.
+    eg: click,mouse over, mouse out etc..,
+
+ii. keyboard events : keyboard ebents are used when user did an action using keyboard.
+eg: keyUp,keyDown,Keypress etc..,
+
+document.addEventListener('keydown'. function ()
+{
+    console.log("hiii")
+})
+
+every time an event got triggeredd it passes an object to callback function function called evenObject. it contains complete event details
+
+
+write a jscode to make a paragraph becomes red color when letter 'r' is pressed 
+
+   document.addEventListener('keydown', function (e)
+    {
+        if(e.key=='r'){
+            document.getElementById("colors").style.color="red"
+        }
+    })
+
+    iii. Form events: These events are used to get the details of inputs or form related from user
+        there are different types of form events like
+          submit -- it is used to submit the entire form
+          reset-- it is used whenever form details got reset
+          change -- it is used when form input values got changed
+          input -- it is used when form values got entered
+          select -- it is used when an input value is selected
+          focus -- it is used when an input 
+
+
+
+
+
+
+

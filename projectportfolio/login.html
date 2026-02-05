@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+        body{
+        background-color: rgba(55, 214, 243, 0.275);
+        justify-content: center;
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        
+        }
+        .box{
+            height: 50vh;
+            width: 25vw;
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+            box-shadow: 2px 5px 5px rgb(86, 77, 77);
+            text-align: center;
+        }
+        h1{
+           text-align: center;
+          padding: 20px;
+          color: blueviolet;
+          font-family:Arial, Helvetica, sans-serif;  
+        }
+
+        .dec{
+            text-decoration: none;
+
+        }
+        .rex{
+              background-color: rgba(197, 196, 196, 0.6);
+              width: 88%;
+            height: 10%;
+            border-radius: 5px;
+            border: 0px solid ;
+            
+
+        }    
+        button{
+            width: 88%;
+            height: 10%;
+            border-radius: 5px;
+            border: 1px solid ;
+            background-image: linear-gradient(to right,rgb(171, 85, 224),rgba(28, 28, 200, 0.679));
+            color: white;
+            font-weight: bold;
+        }
+        .forgot{
+            text-decoration: none;
+            color: blueviolet;
+            margin-left: 100px;
+        }
+        .email{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            margin-right: 38vh;
+        }
+        .emails{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            margin-right: 42vh;
+        }
+        .dec{
+            color: blueviolet;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <form action="https://cssbuttons.io/">
+        <div class="box">
+        <h1>Login</h1>
+        <label for="email" class="emails">Email</label><br>
+        <input type="email" name="email" id="id" class="rex" placeholder="you@example.com" required><br><br>
+        <label for="Password" class="email">Password</label><br>
+        <input type="password" name="password" id="pass" class="rex" required><br><br>
+        <input type="checkbox" name="remember" id="remember" class="remember">
+        <label for="remember" class="remember">Remember me</label>
+        <a href="" class="forgot">Forgot Password?</a><br><br>
+        <button type="submit">Log In</button><br><br>
+        <p>Don't have an account? <a href="" class="dec">Sign up</a></p>
+    </div>
+    </form>
+</body>
+</html>

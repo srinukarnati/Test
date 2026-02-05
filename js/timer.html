@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: white;
+            
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            width: 300px;
+            background: black center center / cover;
+            box-shadow: 2px 2px 2px 5px rgb(249, 238, 238);
+            border-radius: 30px;
+            margin-top: 150px;
+        }
+        h2{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+            text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.7);
+            border: 2px solid white;
+            border-radius: 20px;
+            padding: 10px 20px;
+        }
+        
+        .ele-container{
+            display: flex;
+            flex-direction: column;
+        }
+        .timecontainer{
+            margin-top: 10px;
+            font-size: 30px;
+            margin-left: 10px;
+        }
+        button{
+            color: black;
+            font-weight: bold;
+            margin-top: 30px;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Stop Watch</h2>
+       <div id="ele-container">
+         <div class="timecontainer"><span id="min">03</span> : <span id="sec">59</span></div>
+        <div>
+            <button id="stop" >Stop</button>
+        <button id="start">Start</button>
+        <button id="reset">Restart</button>
+        </div>
+       </div>
+    </div>
+    <script>
+        const minDisplay = document.getElementById('min');
+        const secDisplay = document.getElementById('sec');
+        const stopBtn = document.getElementById('stop');
+        const startBtn = document.getElementById('start');
+        const resetBtn = document.getElementById('reset');
+
+        let minutes = 3;
+        let seconds = 59;
+        let interval;
+        function updateDisplay(){
+            minDisplay.textContent = String(minutes).padStart(2,'0');
+            secDisplay.textContent = String(seconds).padStart(2,'0');
+
+        }
+        function countdown(){
+            if(seconds === 0 && minutes===0){
+                clearInterval(interval);
+                return;
+            }
+            if(seconds===0){
+                if(minutes>0){
+                    minutes--;
+                    seconds=59;
+                }
+            }
+            else{
+                seconds--;
+            }
+            updateDisplay();
+        }
+        startBtn.addEventListener('click',()=>{
+            if(!interval){
+                interval = setInterval(countdown,100);
+            }
+        });
+        stopBtn.addEventListener('click',()=>{
+            clearTimeout(interval);
+            interval = null;
+        });
+        resetBtn.addEventListener('click',()=>{
+            minutes=3;
+            seconds=59;
+        });
+        updateDisplay();
+    </script>
+</body>
+</html>

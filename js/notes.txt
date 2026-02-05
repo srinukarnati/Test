@@ -1,0 +1,180 @@
+AJAX(Asynchronous Javascript) : Javascript is normally synchronous and single threaded language. Synchronous executes code one after the other and single threaded means execute only one code at a time.
+console.log("hi");
+console.log("bye")
+ 
+
+Asynchronous Javascript allows to execute code, not immediately.
+Asynchronous Javascript allows to execute only specific code with
+interuppting other codes(UI).
+eg. adding item to cart or score update in crickbuzz etc...,
+
+we can use browser default timers to understand AJAX, browser provides two default methods called
+        i. setTimeOut
+        ii.seetInterval
+
+i. setTimeOut : it is used to perform a tassk after a specific time setTimeOut(callback funciton , time in ms).
+    eg: setTImeOut(()=>console.log("hello world"),1000)
+    it print hello world after 1s
+    in case if any other code is next to it, it will get executed immediately.
+
+ii.setInterval : it is used to perform a task every time of specific interval. 
+    setInterval(callback funciton, time in ms)
+    eg : setInterval(()=> console.log("hello world"),1000)
+    it prints hello world for every 1s
+
+we can stop these using clearTimeOut and clearInterval
+    clearTimeOut(variable of setTimeOut)
+    clearInterval(variable of setInterval)
+
+
+BOM(Browser Object Model): Browser provide an object to control the complete  browser(not web page),"window"
+The methods like alert, prompt ,confirm,setTimeout, setInterval, fetch and objects like console, document are all part of window object
+It have default methods like
+
+    i.basic usage: we can open or close the window using 
+    window.open(url)
+    window.close() or variable.close()
+
+    ii. history: we cannot access the actual hsitory pages but we can access methods like
+    back() --- used to go back
+    forward() --- used to go forward
+    
+    
+    iii. location : we can access current webpage details using window.
+
+    location
+        href --- complete web pages url
+        Search -- only search urls
+        reload() -- reload the current web page
+        replace -- replaces the current web page url
+
+    iv.geolocation : we can access feo location using window .navigator.geolocation
+    window.navigator.geolocation.getCurrentPosition(res) => 
+    ({
+         console.log(res.coords.latitude,res.coords.langitude)
+    },(err) =>{
+        console.log(err)
+    })
+
+    vi. local storage vs session storage:
+        Browser can even store the data using local storage or session storage
+        local storage is permanant and stays even after browser closes.
+        session storage is temporary and will get expired once the browser closes 
+        local storage can be shared to all tabs but session storage stays for only one tab
+
+        local or session storage uses similar methods such as 
+        localStorage.setItem(itemName,value) -- always it stores values as strings
+        localStorage.getItem(itemName)
+        localStorage.clear()
+        localStorage.removeItem(iteName)
+
+    Libraries: Librarie is a prewritten code for specific purpose
+
+        Most Famous JAVASCRIPT libraries are 
+            1. JQuery
+            2. Axios
+            3. React
+            4. SLick/ swiper js /owl carousel/ tns slider
+            5. AOS(animate on scroll)
+            6. GSAP
+            7. THree JS/animate js
+            8. chartjs/am4charts
+
+
+    how to use a libraries?
+    1. take library cdn link and attach to HTML,
+    2.  Read doc and apply necessary changes.
+
+    ES6: ES stands for ECMAScript. ECMAScript is the standard that js follows. if JS is like a chef, then ECMAScript is a like a recipe book. 
+    every anew features needs to be added to JS, a new version of ES will be released . ES6 released in 2015 also called ES2015. THe latest version is ES2024 or ES15 
+    ES6 actuakky brought lot of revolutionary features such as  
+        i. let & const
+        ii. template literals
+        iii.Arrow Functons
+        iv.default parameters
+        v. Promises/Async Await
+        vi. OOP(object oriented programming)
+        vii. destructuring Array/objects
+        viii. Rest of the parameters and spread operator
+        ix. ES6 Module System
+
+    vi.OOP(object oriented programming)
+: 
+it is way of writing code
+problem : jack wants six packs
+solutions1: wake up early --> hit the gym --> dosome exercises --> maintain diet --> repeat for some year
+sloution2 : frist build muscles --> build some biceps --> some chest --> do some abs
+solution3: check what i needs for six packs --> verify constantly what you --> do what is needed
+
+The third approsch explians object oriented programming. it constantly focus on objects.
+Object is a physical entity which have properties and methods 
+class is a standard/blueprint of a object. it contains multiple objects so can be called as collection of objects
+
+class Fruit{
+color;shape;name;taste;
+}
+apple is an object which is from class Fruit
+//To create object we use a keyword new -- to generate dynamic memory
+let apple = new Fruit();
+let banana =  new Fruit(); 
+
+
+
+//Inheritance : when a class is derived from another class it is called Inheritance
+
+
+class carousel{
+    cmodel.mileage;price;
+    constructor(a,b,c){
+        this.model =a;
+        this.mileage =b;
+        this.price =c;
+    }
+}
+let obj1 = new Car("tata punch","20kmph",6);
+console.log(obj1.mileage)
+
+class ElectricCar extends Car{
+    batteryCapacity;
+    constructor(a,b,c,d){
+        super(a,b,c);
+        this.batteryCapacity = d;
+    }
+}
+let obj2 = new ElectricCar("tesla", 20kmph,70,"10hr")
+
+destructuring of objects or arrays:
+    let arr = [5,4,6,9];
+    let [a,b,c,d] = arr;
+
+    let obj = {name : "shakhar",age:55}
+    let{name,age} = obj;
+    let {name,age} = obj; //destructuring of object
+
+Rest of the parameters : 
+        it is representedby three dots and it is used  to collect all the rest of parameters 
+        and store them as an array. it is always written at last of parameters.
+        let [a,..b]=["raj","shekhar","jhon"]
+        console.log(a) //raj
+        console.log(b) //["shekhar","jhon"]
+
+
+Spread operator : 
+    it is used to spread out the array. it is also represented by three dots 
+
+let a =[1,2],b=[3,4];
+let c=[..a,..b];
+console.log(c) //[1,2,3,4];
+
+Modules : 
+
+
+
+
+
+
+
+
+
+
+
